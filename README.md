@@ -3,18 +3,12 @@
 geodrawr
 ========
 
-<!-- badges: start -->
-<!-- badges: end -->
-The goal of geodrawr is to ...
+An interactive tool for making geo-spatial objects by clicks on the map
 
-<!-- ## Installation -->
-You can install the released version of geodrawr from [CRAN](https://CRAN.R-project.org) with: <!--
-``` r
-install.packages("geodrawr")
-```
+Installation
+------------
 
-And the development version from [GitHub](https://github.com/) with:
--->
+You can install the released version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

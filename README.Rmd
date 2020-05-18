@@ -15,21 +15,12 @@ knitr::opts_chunk$set(
 
 # geodrawr
 
-<!-- badges: start -->
-<!-- badges: end -->
+An interactive tool for making geo-spatial objects by clicks on the map  
 
-The goal of geodrawr is to ...
+## Installation  
 
-<!-- ## Installation -->
+You can install the released version from [GitHub](https://github.com/) with:
 
-You can install the released version of geodrawr from [CRAN](https://CRAN.R-project.org) with:
-<!--
-``` r
-install.packages("geodrawr")
-```
-
-And the development version from [GitHub](https://github.com/) with:
--->
 
 ``` r
 # install.packages("devtools")
