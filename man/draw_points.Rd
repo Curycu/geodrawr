@@ -7,11 +7,12 @@
 draw_points()
 }
 \value{
-
+shiny::shinyApp
 }
 \description{
 run shiny app : making points by click on the map
 }
 \examples{
-draw_points()
+# Only run this example in interactive R sessions
+# draw_points()
 }

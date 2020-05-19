@@ -7,11 +7,12 @@
 draw_lines()
 }
 \value{
-
+shiny::shinyApp
 }
 \description{
 run shiny app : making lines by click on the map
 }
 \examples{
-draw_lines()
+# Only run this example in interactive R sessions
+# draw_lines()
 }

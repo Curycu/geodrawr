@@ -1,10 +1,11 @@
 #' run shiny app : making polygons by click on the map
 #'
-#' @return
+#' @return shiny::shinyApp
 #' @export
 #'
 #' @examples
-#' draw_polygons()
+#' # Only run this example in interactive R sessions
+#' # draw_polygons()
 draw_polygons <- function(){
 
   head <- dashboardHeader(disable=TRUE)
@@ -59,7 +60,7 @@ draw_polygons <- function(){
     observeEvent(input$make, {
       if(nrow(rv$clicks) > 0){ # at least 1 point
         rv$clicks <- rbind(rv$clicks, rv$clicks[1,]) # add first point (= to make close polygon)
-        new.polygon <- rv$clicks %>% as.matrix %>% list(.) %>% st_polygon # make polygon
+        new.polygon <- rv$clicks %>% as.matrix %>% list %>% st_polygon # make polygon
         rv$objects[[length(rv$objects) + 1]] <- new.polygon # append to polygon list
         rv$clicks <- data.frame(lng = numeric(), lat = numeric()) # reset clicks
 

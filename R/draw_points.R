@@ -1,10 +1,11 @@
 #' run shiny app : making points by click on the map
 #'
-#' @return
+#' @return shiny::shinyApp
 #' @export
 #'
 #' @examples
-#' draw_points()
+#' # Only run this example in interactive R sessions
+#' # draw_points()
 draw_points <- function(){
 
   head <- dashboardHeader(disable=TRUE)

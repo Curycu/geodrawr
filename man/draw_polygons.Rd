@@ -7,11 +7,12 @@
 draw_polygons()
 }
 \value{
-
+shiny::shinyApp
 }
 \description{
 run shiny app : making polygons by click on the map
 }
 \examples{
-draw_polygons()
+# Only run this example in interactive R sessions
+# draw_polygons()
 }

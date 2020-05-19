@@ -1,10 +1,11 @@
 #' run shiny app : making lines by click on the map
 #'
-#' @return
+#' @return shiny::shinyApp
 #' @export
 #'
 #' @examples
-#' draw_lines()
+#' # Only run this example in interactive R sessions
+#' # draw_lines()
 draw_lines <- function(){
 
   head <- dashboardHeader(disable=TRUE)
