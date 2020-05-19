@@ -1,6 +1,7 @@
-#' run shiny app : making polygons by click on the map
+#' Making Polygons by Clicks on the Map
 #'
-#' @return shiny::shinyApp
+#' @return
+#' An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 #' @export
 #'
 #' @examples

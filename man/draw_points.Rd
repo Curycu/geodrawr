@@ -2,15 +2,15 @@
 % Please edit documentation in R/draw_points.R
 \name{draw_points}
 \alias{draw_points}
-\title{run shiny app : making points by click on the map}
+\title{Making Points by Clicks on the Map}
 \usage{
 draw_points()
 }
 \value{
-shiny::shinyApp
+An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 }
 \description{
-run shiny app : making points by click on the map
+Making Points by Clicks on the Map
 }
 \examples{
 # Only run this example in interactive R sessions

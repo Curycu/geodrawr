@@ -1,6 +1,7 @@
-#' run shiny app : making lines by click on the map
+#' Making Lines by Clicks on the Map
 #'
-#' @return shiny::shinyApp
+#' @return
+#' An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 #' @export
 #'
 #' @examples

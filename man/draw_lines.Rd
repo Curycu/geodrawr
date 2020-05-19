@@ -2,15 +2,15 @@
 % Please edit documentation in R/draw_lines.R
 \name{draw_lines}
 \alias{draw_lines}
-\title{run shiny app : making lines by click on the map}
+\title{Making Lines by Clicks on the Map}
 \usage{
 draw_lines()
 }
 \value{
-shiny::shinyApp
+An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 }
 \description{
-run shiny app : making lines by click on the map
+Making Lines by Clicks on the Map
 }
 \examples{
 # Only run this example in interactive R sessions

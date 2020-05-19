@@ -2,15 +2,15 @@
 % Please edit documentation in R/draw_polygons.R
 \name{draw_polygons}
 \alias{draw_polygons}
-\title{run shiny app : making polygons by click on the map}
+\title{Making Polygons by Clicks on the Map}
 \usage{
 draw_polygons()
 }
 \value{
-shiny::shinyApp
+An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 }
 \description{
-run shiny app : making polygons by click on the map
+Making Polygons by Clicks on the Map
 }
 \examples{
 # Only run this example in interactive R sessions
