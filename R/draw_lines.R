@@ -16,10 +16,11 @@ draw_lines <- function(){
     fluidRow(
       box(width=8, leafletOutput('map', height=800)),
       box(width=4,
-          textInput('save_file_name', label=h3('Save File Name'), value='lines.rds'),
-          actionButton('cut', 'Cut'),
+          textInput('file_name', label='File Name', value='lines.rds'),
+          actionButton('make', 'Make'),
           actionButton('clear', 'Clear'),
-          actionButton('save', 'Save')
+          actionButton('save', 'Save'),
+          actionButton('load', 'Load')
       )
     )
   )
@@ -57,8 +58,8 @@ draw_lines <- function(){
         addPolylines(data=rv$clicks, lng=~lng, lat=~lat, weight=2, dashArray=3, color='black', opacity=1, layerId='lines')
     })
 
-    # cut button click
-    observeEvent(input$cut, {
+    # make button click
+    observeEvent(input$make, {
       if(nrow(rv$clicks) > 0){ # at least 1 point
         new.line <- rv$clicks %>% as.matrix %>% st_linestring # make linestring
         rv$objects[[length(rv$objects) + 1]] <- new.line # append to line list
@@ -67,7 +68,7 @@ draw_lines <- function(){
         leafletProxy('map') %>%
           removeShape('circles') %>%
           removeShape('lines') %>%
-          addPolylines(data=new.line %>% st_sfc, weight=1, color='black', fillColor='black', fillOpacity=.5)
+          addPolylines(data=new.line %>% st_sfc, weight=2, color='black', fillColor='black', fillOpacity=.5)
       }
     })
 
@@ -82,12 +83,21 @@ draw_lines <- function(){
     observeEvent(input$save, {
       rv$objects %>%
         st_sfc %>%
-        saveRDS(file=input$save_file_name)
+        saveRDS(file=input$file_name)
 
       save.file.message <-
-        paste('lines are saved at: ', getwd(), '/', input$save_file_name, sep='')
+        paste('lines are saved at: ', getwd(), '/', input$file_name, sep='')
 
       print(save.file.message)
+    })
+
+    # load button click
+    observeEvent(input$load, {
+      rv$objects <- readRDS(input$file_name) %>% st_sfc
+
+      leafletProxy('map') %>%
+        clearShapes() %>%
+        addPolylines(data=rv$objects %>% st_sfc, weight=1, color='black', fillColor='black', fillOpacity=.5)
     })
   }
 

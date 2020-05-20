@@ -16,10 +16,11 @@ draw_polygons <- function(){
     fluidRow(
       box(width=8, leafletOutput('map', height=800)),
       box(width=4,
-          textInput('save_file_name', label=h3('Save File Name'), value='polygons.rds'),
+          textInput('file_name', label='File Name', value='polygons.rds'),
           actionButton('make', 'Make'),
           actionButton('clear', 'Clear'),
-          actionButton('save', 'Save')
+          actionButton('save', 'Save'),
+          actionButton('load', 'Load')
       )
     )
   )
@@ -89,6 +90,15 @@ draw_polygons <- function(){
         paste('polygons are saved at: ', getwd(), '/', input$save_file_name, sep='')
 
       print(save.file.message)
+    })
+
+    # load button click
+    observeEvent(input$load, {
+      rv$objects <- readRDS(input$file_name) %>% st_sfc
+
+      leafletProxy('map') %>%
+        clearShapes() %>%
+        addPolygons(data=rv$objects %>% st_sfc, weight=1, color='black', fillColor='black', fillOpacity=.5)
     })
   }
 
