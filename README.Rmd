@@ -43,13 +43,16 @@ library(geodrawr)
   - push Make button for polygon completion  
   - click the map to start to making an another polygon  
   - push Save button for save complete polygons as rds file  
+  - push Load button for load polygons from rds file  
 
 #### case lines  
   - click the map to make edges  
-  - push Cut button for line completion  
+  - push Make button for line completion  
   - click the map to start to making an another line  
   - push Save button for save complete lines as rds file  
+  - push Load button for load lines from rds file  
   
 #### case points  
   - click the map to make points  
-  - push Save button for save points as rds file
+  - push Save button for save points as rds file  
+  - push Load button for load points from rds file  
