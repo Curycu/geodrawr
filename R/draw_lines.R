@@ -68,7 +68,7 @@ draw_lines <- function(){
         leafletProxy('map') %>%
           removeShape('circles') %>%
           removeShape('lines') %>%
-          addPolylines(data=new.line %>% st_sfc, weight=2, color='black', fillColor='black', fillOpacity=.5)
+          addPolylines(data=new.line %>% st_sfc, weight=2, color='black', fillColor='black')
       }
     })
 
@@ -97,7 +97,7 @@ draw_lines <- function(){
 
       leafletProxy('map') %>%
         clearShapes() %>%
-        addPolylines(data=rv$objects %>% st_sfc, weight=1, color='black', fillColor='black', fillOpacity=.5)
+        addPolylines(data=rv$objects %>% st_sfc, weight=2, color='black', fillColor='black')
     })
   }
 

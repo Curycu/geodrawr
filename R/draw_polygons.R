@@ -84,10 +84,10 @@ draw_polygons <- function(){
     observeEvent(input$save, {
       rv$objects %>%
         st_sfc %>%
-        saveRDS(file=input$save_file_name)
+        saveRDS(file=input$file_name)
 
       save.file.message <-
-        paste('polygons are saved at: ', getwd(), '/', input$save_file_name, sep='')
+        paste('polygons are saved at: ', getwd(), '/', input$file_name, sep='')
 
       print(save.file.message)
     })

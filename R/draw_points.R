@@ -70,12 +70,12 @@ draw_points <- function(){
           st_sfc %>%
           st_cast('POINT') %>%
           saveRDS(file=input$file_name)
+
+        save.file.message <-
+          paste('points are saved at: ', getwd(), '/', input$file_name, sep='')
+
+        print(save.file.message)
       }
-
-      save.file.message <-
-        paste('points are saved at: ', getwd(), '/', input$file_name, sep='')
-
-      print(save.file.message)
     })
 
     as.clicks <- function(x){
