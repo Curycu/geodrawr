@@ -94,6 +94,7 @@ draw_lines <- function(){
     # load button click
     observeEvent(input$load, {
       rv$objects <- readRDS(input$file_name) %>% st_sfc
+      rv$clicks <- data.frame(lng = numeric(), lat = numeric())
 
       leafletProxy('map') %>%
         clearShapes() %>%
