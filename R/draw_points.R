@@ -16,9 +16,10 @@ draw_points <- function(){
     fluidRow(
       box(width=8, leafletOutput('map', height=800)),
       box(width=4,
-          textInput('save_file_name', label=h3('Save File Name'), value='points.rds'),
+          textInput('file_name', label='File Name', value='points.rds'),
           actionButton('clear', 'Clear'),
-          actionButton('save', 'Save')
+          actionButton('save', 'Save'),
+          actionButton('load', 'Load')
       )
     )
   )
@@ -62,17 +63,33 @@ draw_points <- function(){
 
     # save button click
     observeEvent(input$save, {
-      rv$clicks %>%
-        as.matrix %>%
-        st_multipoint %>%
-        st_sfc %>%
-        st_cast('POINT') %>%
-        saveRDS(file=input$save_file_name)
+      if(nrow(rv$clicks) > 0){ # at least 1 point
+        rv$clicks %>%
+          as.matrix %>%
+          st_multipoint %>%
+          st_sfc %>%
+          st_cast('POINT') %>%
+          saveRDS(file=input$file_name)
 
-      save.file.message <-
-        paste('points are saved at: ', getwd(), '/', input$save_file_name, sep='')
+        save.file.message <-
+          paste('points are saved at: ', getwd(), '/', input$file_name, sep='')
 
-      print(save.file.message)
+        print(save.file.message)
+      }
+    })
+
+    as.clicks <- function(x){
+      mat <- sapply(x, function(x) c(x[1], x[2]))
+      data.frame(lng=mat[1,], lat=mat[2,])
+    }
+
+    # load button click
+    observeEvent(input$load, {
+      rv$clicks <- as.clicks(readRDS(input$file_name))
+
+      leafletProxy('map') %>%
+        clearShapes() %>%
+        addCircles(data=rv$clicks, lng=~lng, lat=~lat, radius=2, color='black', opacity=1)
     })
   }
 
