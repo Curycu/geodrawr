@@ -29,19 +29,23 @@ library(geodrawr)
 
 #### case polygons
 
-  - click the map to make edges  
-  - push Make button for polygon completion  
-  - click the map to start to making an another polygon  
-  - push Save button for save complete polygons as rds file
+![draw\_polygons](draw_polygons.gif)  
+\- click the map to make edges  
+\- push **Make** button to make a polygon from the edges  
+\- push **Save** button to save polygons as rds file  
+\- push **Load** button to load polygons from rds file
 
 #### case lines
 
-  - click the map to make edges  
-  - push Cut button for line completion  
-  - click the map to start to making an another line  
-  - push Save button for save complete lines as rds file
+![draw\_lines](draw_lines.gif)  
+\- click the map to make edges  
+\- push **Make** button to make a line from the edges  
+\- push **Save** button to save lines as rds file  
+\- push **Load** button to load lines from rds file
 
 #### case points
 
-  - click the map to make points  
-  - push Save button for save points as rds file
+![draw\_points](draw_points.gif)  
+\- click the map to make a point  
+\- push **Save** button to save points on the map as a rds file  
+\- push **Load** button to load points from rds file
