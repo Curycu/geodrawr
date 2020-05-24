@@ -1,6 +1,6 @@
 Package: geodrawr
 Title: Making GeoSpatial Objects
-Version: 0.0.0.9000
+Version: 0.9.0
 Authors@R: 
     person(given = "Heoncheol",
            family = "Ha",
