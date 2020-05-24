@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "hancury@gmail.com",
            comment = c(ORCID = "0000-0001-7095-3841"))
-Description: Draw GeoSpatial Objects by Clicks on the Map.
+Description: Draw Geospatial Objects by Clicks on the Map.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
