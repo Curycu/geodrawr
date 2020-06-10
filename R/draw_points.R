@@ -1,4 +1,8 @@
-#' Making Points by Clicks on the Map
+#' Making points by clicks on the map
+#'
+#' This function run a Shiny application with map.
+#' You can make your own geospatial point by click on the map.
+#' If you click save button then your geospatial points will be saved as a RDS file.
 #'
 #' @return
 #' An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.

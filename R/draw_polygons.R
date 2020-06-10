@@ -1,4 +1,8 @@
-#' Making Polygons by Clicks on the Map
+#' Making polygons by clicks on the map
+#'
+#' This function run a Shiny application with map.
+#' You can shape your own geospatial polygon by clicks on the map and complete it with make button.
+#' If you click save button then your completed geospatial polygons will be saved as a RDS file.
 #'
 #' @return
 #' An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.

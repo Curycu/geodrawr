@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw_points.R
 \name{draw_points}
 \alias{draw_points}
-\title{Making Points by Clicks on the Map}
+\title{Making points by clicks on the map}
 \usage{
 draw_points()
 }
@@ -10,7 +10,9 @@ draw_points()
 An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 }
 \description{
-Making Points by Clicks on the Map
+This function run a Shiny application with map.
+You can make your own geospatial point by click on the map.
+If you click save button then your geospatial points will be saved as a RDS file.
 }
 \examples{
 # Only run this example in interactive R sessions

@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw_lines.R
 \name{draw_lines}
 \alias{draw_lines}
-\title{Making Lines by Clicks on the Map}
+\title{Making lines by clicks on the map}
 \usage{
 draw_lines()
 }
@@ -10,7 +10,9 @@ draw_lines()
 An object that represents the app. Printing the object or passing it to shiny::runApp() will run the app.
 }
 \description{
-Making Lines by Clicks on the Map
+This function run a Shiny application with map.
+You can shape your own geospatial line by clicks on the map and complete it with make button.
+If you click save button then your completed geospatial lines will be saved as a RDS file.
 }
 \examples{
 # Only run this example in interactive R sessions
