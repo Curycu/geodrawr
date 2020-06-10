@@ -14,5 +14,5 @@ Making Polygons by Clicks on the Map
 }
 \examples{
 # Only run this example in interactive R sessions
-# draw_polygons()
+if (interactive()) draw_polygons()
 }

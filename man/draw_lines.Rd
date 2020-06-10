@@ -14,5 +14,5 @@ Making Lines by Clicks on the Map
 }
 \examples{
 # Only run this example in interactive R sessions
-# draw_lines()
+if (interactive()) draw_lines()
 }

@@ -1,19 +1,21 @@
 Package: geodrawr
 Title: Making Geospatial Objects
-Version: 1.0.0
-Authors@R: 
+Version: 1.0.1
+Authors@R:
     person(given = "Heoncheol",
            family = "Ha",
            role = c("aut", "cre"),
            email = "hancury@gmail.com",
            comment = c(ORCID = "0000-0001-7095-3841"))
-Description: Draw Geospatial Objects by Clicks on the Map.
+Description: Draw geospatial objects by clicks on the map.
+    This packages can help data analyst who want to check
+    their own geospatial hypothesis but has no ready-made geospatial objects.
 Depends: R (>= 3.6.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
-Imports: 
+Imports:
     sf (>= 0.9-0),
     leaflet (>= 2.0.0),
     shiny (>= 1.4.0),

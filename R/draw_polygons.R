@@ -6,7 +6,7 @@
 #'
 #' @examples
 #' # Only run this example in interactive R sessions
-#' # draw_polygons()
+#' if (interactive()) draw_polygons()
 draw_polygons <- function(){
 
   head <- dashboardHeader(disable=TRUE)

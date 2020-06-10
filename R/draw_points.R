@@ -6,7 +6,7 @@
 #'
 #' @examples
 #' # Only run this example in interactive R sessions
-#' # draw_points()
+#' if (interactive()) draw_points()
 draw_points <- function(){
 
   head <- dashboardHeader(disable=TRUE)
