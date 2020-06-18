@@ -7,15 +7,17 @@ An interactive tool for making geo-spatial objects by clicks on the map
 
 ## Installation
 
-To install the stable version from CRAN, simply run the following from an R console:
+To install the stable version from CRAN, simply run the following from
+an R console:
 
-```r
+``` r
 install.packages('geodrawr')
 ```
 
-To install the latest development builds directly from GitHub, run this instead:
+To install the latest development builds directly from GitHub, run this
+instead:
 
-```r
+``` r
 if (!require('devtools')) install.packages('devtools')
 devtools::install_github('Curycu/geodrawr')
 ```
