@@ -1,5 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![](http://cranlogs.r-pkg.org/badges/grand-total/geodrawr)](https://cran.r-project.org/web/packages/geodrawr/index.html)
 
 # geodrawr
 
