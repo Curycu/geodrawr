@@ -1,8 +1,6 @@
 ## Resubmission  
 This is a resubmission. In this version I have:  
 
-* Capitalize sentence beginnings and names only in the description text  
+* Add CRS information to draw_polygons, draw_points, draw_lines methods' results.
 
-* Elaborate what the package does and why it may be useful  
-
-* Use if(interactive()) for methods' example (Not just commented out)  
+* Since all methods results have CRS in this version, No backward compatibility is supported.

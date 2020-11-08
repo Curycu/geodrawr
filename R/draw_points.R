@@ -68,10 +68,11 @@ draw_points <- function(){
     # save button click
     observeEvent(input$save, {
       if(nrow(rv$clicks) > 0){ # at least 1 point
+        base_crs = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
         rv$clicks %>%
           as.matrix %>%
           st_multipoint %>%
-          st_sfc %>%
+          st_sfc(crs=base_crs) %>%
           st_cast('POINT') %>%
           saveRDS(file=input$file_name)
 

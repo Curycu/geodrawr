@@ -85,8 +85,9 @@ draw_lines <- function(){
 
     # save button click
     observeEvent(input$save, {
+      base_crs = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
       rv$objects %>%
-        st_sfc %>%
+        st_sfc(crs=base_crs) %>%
         saveRDS(file=input$file_name)
 
       save.file.message <-
