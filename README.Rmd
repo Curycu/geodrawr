@@ -15,19 +15,24 @@ knitr::opts_chunk$set(
 
 # geodrawr
 
+<!-- badges: start -->
+[![CRAN](https://www.r-pkg.org/badges/version/geodrawr)](https://cran.r-project.org/package=geodrawr)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/geodrawr)](https://www.r-pkg.org/pkg/geodrawr)
+<!-- badges: end -->
+
 An interactive tool for making geo-spatial objects by clicks on the map  
 
 ## Installation  
 
 To install the stable version from CRAN, simply run the following from an R console:
 
-```r
+```{r, eval = FALSE}
 install.packages('geodrawr')
 ```
 
 To install the latest development builds directly from GitHub, run this instead:
 
-```r
+```{r, eval = FALSE}
 if (!require('devtools')) install.packages('devtools')
 devtools::install_github('Curycu/geodrawr')
 ```
@@ -36,12 +41,12 @@ devtools::install_github('Curycu/geodrawr')
 
 There are three draw tools : 
 
-```{r example}
+```{r, eval = FALSE}
 library(geodrawr)
 
-# draw_polygons()
-# draw_lines()
-# draw_points()
+draw_polygons()
+draw_lines()
+draw_points()
 ```
 
 #### case polygons  

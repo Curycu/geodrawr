@@ -1,8 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![](http://cranlogs.r-pkg.org/badges/grand-total/geodrawr)](https://CRAN.R-project.org/package=geodrawr)
 
 # geodrawr
+
+<!-- badges: start -->
+
+[![CRAN](https://www.r-pkg.org/badges/version/geodrawr)](https://cran.r-project.org/package=geodrawr)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/geodrawr)](https://www.r-pkg.org/pkg/geodrawr)
+<!-- badges: end -->
 
 An interactive tool for making geo-spatial objects by clicks on the map
 
@@ -30,9 +35,9 @@ There are three draw tools :
 ``` r
 library(geodrawr)
 
-# draw_polygons()
-# draw_lines()
-# draw_points()
+draw_polygons()
+draw_lines()
+draw_points()
 ```
 
 #### case polygons
